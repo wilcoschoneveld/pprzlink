@@ -1394,7 +1394,7 @@
     <field name="pdop"    type="uint16"/>
     <field name="numsv"   type="uint8"/>
     <field name="fix"     type="uint8" values="NONE|NA|2D|3D|DGPS|RTK"/>
-    <field name="comp_id" type="uint8" values="NONE|UBX|NMEA|SIRF|SKYTRAQ|MTK|PIKSI|XSENS|DATALINK|UDP|ARDRONE2|SIM"/>
+    <field name="comp_id" type="uint8" values="NONE|UBX|NMEA|SIRF|SKYTRAQ|MTK|PIKSI|XSENS|DATALINK|UDP|ARDRONE2|SIM|IMCU"/>
   </message>
 
   <message name="AHRS_EULER_INT" id="156">
@@ -3108,6 +3108,22 @@
      <field name="mode" type="uint8" values="SWITCH|SONAR|LASER|INFRARED"/>
      <field name="id" type="uint8">Sensor ID</field>
      <field name="range" type="uint16" unit="cm"/>
+   </message>
+
+   <message name="IMCU_REMOTE_GPS" id="62">
+     <field name="ecef_x"  type="int32" unit="cm"   alt_unit="m"/>
+     <field name="ecef_y"  type="int32" unit="cm"   alt_unit="m"/>
+     <field name="ecef_z"  type="int32" unit="cm"   alt_unit="m"/>
+     <field name="alt"     type="int32" unit="mm"   alt_unit="m">altitude above WGS84 reference ellipsoid</field>
+     <field name="hmsl"    type="int32" unit="mm"   alt_unit="m">height above mean sea level (geoid)</field>
+     <field name="ecef_xd" type="int32" unit="cm/s" alt_unit="m/s"/>
+     <field name="ecef_yd" type="int32" unit="cm/s" alt_unit="m/s"/>
+     <field name="ecef_zd" type="int32" unit="cm/s" alt_unit="m/s"/>
+     <field name="course"  type="int32" alt_unit="rad" alt_unit_coef="0.0000001"/>
+     <field name="pacc"    type="uint32" unit="cm"   alt_unit="m"/>
+     <field name="sacc"    type="uint32" unit="cm/s" alt_unit="m/s"/>
+     <field name="numsv"   type="uint8"/>
+     <field name="fix"     type="uint8" values="NONE|NA|2D|3D|DGPS|RTK"/>
    </message>
 
    <message name="IMCU_TELEMETRY" id="114">
