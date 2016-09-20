@@ -1951,7 +1951,12 @@
     <field name="g2_r" type="float"/>
   </message>
 
-  <!--217 is free -->
+  <message name="ROTORCRAFT_FP_MIN" id="217">
+    <field name="east"     type="int32" alt_unit="m" alt_unit_coef="0.0039063"/>
+    <field name="north"    type="int32" alt_unit="m" alt_unit_coef="0.0039063"/>
+    <field name="up"       type="int32" alt_unit="m" alt_unit_coef="0.0039063"/>
+    <field name="gspeed"   type="uint16" unit="cm/s" alt_unit="m/s"/>
+  </message>
 
   <message name="BEBOP_ACTUATORS" id="218">
     <field name="cmd_thrust" type="int32"/>
@@ -2994,12 +2999,12 @@
       Field name shape is used to define the type of shape i.e. Circle, Polygon, Line, or Text.
       This is indexed from 0-3 respectively.
 
-      Each shape drawn must have an id number associated with it. 
-      This id number in conjuction with the shapetype will be needed to update or delete the shape. 
+      Each shape drawn must have an id number associated with it.
+      This id number in conjuction with the shapetype will be needed to update or delete the shape.
       A circle can be defined with the same id as a polygon but since they have different shape types they are considered unique.
 
-      linecolor and fillcolor take in a color string ie: "red", "blue" 
-      
+      linecolor and fillcolor take in a color string ie: "red", "blue"
+
       opacity will change the level of transparency of the fill.
       0 - Transparent
       1 - Light Fill
@@ -3009,7 +3014,7 @@
       Passing a status of 0 will create or update the shape specified by id and type.
       Passing a status of 1 will delete the shape specified by id and type.
 
-      latarr is an array of coordinates that contain the latitude coordinate for each point in the shape. 
+      latarr is an array of coordinates that contain the latitude coordinate for each point in the shape.
       The array is comma separated.
       lonarr is similar to latarr but contain the longitude coordinate for each point in the shape.
 
