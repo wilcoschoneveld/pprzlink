@@ -2045,7 +2045,12 @@
     <field name="imageBuffer" type="uint8[]"/>
   </message>
 
-  <!--230 is free -->
+   <message name="DETECTOR" id="230">
+     <field name="detected" type="uint8" unit="bool"/>
+     <field name="pixel_x" type="uint32"/>
+     <field name="pixel_y" type="uint32"/>
+     <field name="found_time" type="float" unit="s" />
+   </message>
 
   <message name="ROTORCRAFT_STATUS" id="231">
     <field name="link_imu_nb_err" type="uint32"/>
