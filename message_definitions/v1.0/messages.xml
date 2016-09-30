@@ -2050,6 +2050,7 @@
      <field name="pixel_x" type="uint32"/>
      <field name="pixel_y" type="uint32"/>
      <field name="found_time" type="float" unit="s" />
+     <field name="mid_time" type="float" unit="s" />
    </message>
 
   <message name="ROTORCRAFT_STATUS" id="231">
@@ -2096,8 +2097,11 @@
   </message>
 
  <message name="SONAR" id="236">
-    <field name="sonar_meas" type="uint16"/>
     <field name="sonar_distance" type="float" unit="m"/>
+    <field name="obstacle_height" type="float" unit="m"/>
+    <field name="altitude_from_ground" type="float" unit="m"/>
+    <field name="Outlier_Count" type="uint8" unit="-"/>
+    <field name="Obstacle_On" type="uint8" unit="bool"/>
   </message>
 
   <message name="PAYLOAD_FLOAT" id="237">
